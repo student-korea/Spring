@@ -1,0 +1,20 @@
+package com.site.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.site.dto.Board;
+
+@Mapper
+public interface BoardMapper {
+
+	List<Board> findAll();
+
+	Board findByBno(int bno);
+
+	void save(Board board);
+
+	void delete(int bno);
+
+}

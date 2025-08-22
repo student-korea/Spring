@@ -41,6 +41,7 @@ public class MController {
 			System.out.println("impossible login");
 		} else {
 			System.out.println("Success Login");
+			return "/index";
 		}
 		
 		return "member/login";

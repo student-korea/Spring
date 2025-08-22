@@ -9,11 +9,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Member {
-	private String id;
-	private String pw;
+public class Stuscore {
+	private int sno;
 	private String name;
-	private String phone;
-	private String gender;
-	private String hobby;
+	private int kor;
+	private int eng;
+	private int math;
+	private int total;
+	private double avg;
+	private int rank;
+	private String sgrade;
+	private int sclass;
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.site.dao.BoardMapper">
+  <select id="findAll" resultType="com.site.dto.Board">
+    select * from board order by bno desc
+  </select>
+  <select id="findByBno" resultType="com.site.dto.Board">
+    select * from board where bno = #{bno}
+  </select>
+  <insert id="save">
+    insert into board values (
+      board_seq.nextval,#{btitle},#{bcontent},#{id},
+      board_seq.currval,0,0,0,#{bfile},sysdate
+    )
+  </insert>
+  <delete id="delete">
+  	delete board where bno=#{bno} 
+  </delete>
+
+</mapper>
