@@ -54,4 +54,13 @@ public class BController {
 		return "redirect:/bList?flag=2";
 	}
 	
+	@GetMapping("/bUpdate")
+	public String bUpdate(@RequestParam(name="bno",defaultValue="0") int bno,Model model) {
+		System.out.println(bno);
+		Board board = bService.findByBno(bno);
+		model.addAttribute("board",board);
+		return "bWrite";
+	}
+		
+	
 }

@@ -73,19 +73,19 @@
         <tr>
           <th>제목</th>
           <td>
-            <input type="text" name="btitle">
+            <input type="text" name="btitle" value="${board.btitle }">
           </td>
         </tr>
         <tr>
           <th>작성자</th>
           <td>
-            <input type="text" name="id" value="aaa">
+            <input type="text" name="id" value="${board.id }" >
           </td>
         </tr>
         <tr>
           <th>내용</th>
           <td>
-            <textarea name="bcontent" cols="50" rows="10"></textarea>
+            <textarea name="bcontent" cols="50" rows="10">${board.bcontent }</textarea>
           </td>
         </tr>
         <tr>
